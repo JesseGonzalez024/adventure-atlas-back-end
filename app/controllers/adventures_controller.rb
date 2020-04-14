@@ -15,7 +15,7 @@ class AdventuresController < ApplicationController
 
     def create
         #Creates a new Adenture based on User form.
-
+        binding.pry
         
     end
 end
