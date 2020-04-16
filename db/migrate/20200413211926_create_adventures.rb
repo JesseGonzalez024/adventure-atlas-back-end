@@ -4,6 +4,7 @@ class CreateAdventures < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :location
       t.string :description
+      t.integer :votes
     end
   end
 end
