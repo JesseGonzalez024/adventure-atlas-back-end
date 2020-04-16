@@ -10,6 +10,4 @@ class PhotoController < ApplicationController
 
     end
 
-
-
 end
