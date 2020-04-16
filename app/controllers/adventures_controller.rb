@@ -3,7 +3,11 @@ class AdventuresController < ApplicationController
     def index
         #Displays all Adventures, available in the Adventure Library.
 
-        render json: Adventure.all
+        # render json: Adventure.send_to_json
+        # render json: Adventure.all.to_json(include: [:photos]) 
+        
+        render json: Adventure.all, include: [:photos]
+
     end
 
     def show
