@@ -7,8 +7,7 @@ class TagsController < ApplicationController
 
     def create
         #Recives new Tag from Adevture Form
-        
-        
+        binding.pry
     end
 
 

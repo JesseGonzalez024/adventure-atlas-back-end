@@ -7,7 +7,7 @@ class PhotoController < ApplicationController
 
     def create
         # Recives Photo from Adevture Form
-
+        binding.pry
     end
 
 end
