@@ -1,4 +1,4 @@
-class PhotoController < ApplicationController
+class PhotosController < ApplicationController
 
     def index
 
@@ -7,7 +7,10 @@ class PhotoController < ApplicationController
 
     def create
         # Recives Photo from Adevture Form
+        photos = Photo.create_photos_from_array(params[:photoCollection])
+
         binding.pry
     end
+
 
 end
