@@ -10,26 +10,18 @@ class AdventuresController < ApplicationController
 
     end
 
-    def show
-        #Displays a specific Adventure based on selection.
-
-        adventure = Adventure.find_by_id(params[:id])
-
-        render json: adventure
-    end
-
     def create
         adventure = Adventure.new(adventure_params)
-        
+
         if adventure.valid?
             adventure.save
         end
         
-        render json: adventure
+        render json: adventure, include: [:photos]
     end
 
     private 
         def adventure_params
-            params.require(:adventure).permit(:name, :location, :description)
+            params.require(:adventure).permit(:name, :location, :description, photos_attributes: [:text])
         end
 end
