@@ -20,9 +20,12 @@ class AdventuresController < ApplicationController
 
     def create
         adventure = Adventure.new(adventure_params)
+        
         if adventure.valid?
             adventure.save
         end
+        
+        render json: adventure
     end
 
     private 

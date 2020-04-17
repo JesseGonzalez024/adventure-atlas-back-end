@@ -6,6 +6,8 @@ class PhotosController < ApplicationController
 
     def create
         photos = Photo.create_photos_from_array(params[:photoCollection])
+
+        render json: photos
     end
 
 end
