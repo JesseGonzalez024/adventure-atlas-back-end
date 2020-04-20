@@ -6,7 +6,7 @@ class AdventuresController < ApplicationController
         # render json: Adventure.send_to_json
         # render json: Adventure.all.to_json(include: [:photos]) 
         
-        render json: Adventure.all, include: [:photos]
+        render json: Adventure.all, include: [:photos, :tags]
 
     end
 
