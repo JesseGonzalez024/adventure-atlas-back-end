@@ -5,6 +5,6 @@ class Adventure < ApplicationRecord
     has_many :photos
     has_many :tags
 
-    accepts_nested_attributes_for :photos
+    accepts_nested_attributes_for :photos, :tags
 
 end

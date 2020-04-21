@@ -13,15 +13,16 @@ class AdventuresController < ApplicationController
     def create
         adventure = Adventure.new(adventure_params)
 
+        #binding.pry
         if adventure.valid?
             adventure.save
         end
         
-        render json: adventure, include: [:photos]
+        render json: adventure, include: [:photos, :tags]
     end
 
     private 
         def adventure_params
-            params.require(:adventure).permit(:name, :location, :description, photos_attributes: [:text])
+            params.require(:adventure).permit(:name, :location, :description, photos_attributes: [:text], tags_attributes: [:text])
         end
 end
